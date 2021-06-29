@@ -7,11 +7,15 @@ function game() {
         //this calls the computerPlay() to assign the returned value of "rock, paper, or scissor" to computerSelection
         const computerSelection = computerPlay();
 
+        //checks to see if user input is empty, else it continues through game
         if (playerSelection === "") {
             alert("Please enter a value");
         } else {
+            //lets user know their pick
             console.log(`You picked: ${playerSelection}`);
+            //lets user know computer's pick
             console.log(`The computer picked ${computerSelection}`);
+            //call playRound() with player and computer arguments. Prints out result from function return
             console.log(playRound(playerSelection, computerSelection));
         } 
         /*
