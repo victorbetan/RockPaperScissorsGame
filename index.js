@@ -2,13 +2,13 @@ function game() {
     for(let i = 0; i < 5; i++) {
 
         //this will change to prompt the user for a choice, and it will need to be case-insensitive
-        const playerSelection = prompt("Give me a letter").toLowerCase();
+        let playerSelection = prompt("Give me a letter").toLowerCase();
 
         //this calls the computerPlay() to assign the returned value of "rock, paper, or scissor" to computerSelection
         const computerSelection = computerPlay();
 
-        if (playerSelection !== " ") {
-            prompt("Please enter a value");
+        if (playerSelection === "") {
+            alert("Please enter a value");
         } else {
             console.log(`You picked: ${playerSelection}`);
             console.log(`The computer picked ${computerSelection}`);
